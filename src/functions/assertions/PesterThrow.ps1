@@ -139,7 +139,7 @@
     if ($buts.Count -ne 0) {
         $filter = Add-SpaceToNonEmptyString ( Join-And $filters -Threshold 3 )
         $but = Join-And $buts
-        $failureMessage = "Expected an exception,$filter to be thrown,$(Format-Because $Because) but $but. $actualExceptionLine".Trim()
+        $failureMessage = "Expected an exception$filter to be thrown,$(Format-Because $Because) but $but. $actualExceptionLine".Trim()
 
         return [PSCustomObject] @{
             Succeeded      = $false
